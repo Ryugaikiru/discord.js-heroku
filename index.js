@@ -21,7 +21,7 @@ client.on('message', msg => {
         var weaponset = 0;
         shuffling();
         let arandomizer = '\nあなたは - ' + randomcrab() + '\n' + weaponset;
-        message.reply(arandomizer).then(message => console.log(`Sent message: ${arandomizer} `)).catch(console.error);
+        msg.channel.send(arandomizer).then(message => console.log(`Sent message: ${arandomizer} `)).catch(console.error);
         return;
     }
     if (message.content === '!knしん') {
@@ -32,7 +32,7 @@ client.on('message', msg => {
         let brandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
         shuffling();
         brandomizer += '\n' + '\n' + 'ゲスト：' + randomcrab() + '\n' + weaponset;
-        message.reply(brandomizer).then(message => console.log(`Sent message: ${brandomizer} `)).catch(console.error);
+        msg.channel.send(brandomizer).then(message => console.log(`Sent message: ${brandomizer} `)).catch(console.error);
         return;
     }
     if (message.content === '!knたっぐ') {
@@ -47,7 +47,7 @@ client.on('message', msg => {
         drandomizer += '\n' + '\n' + 'ホストの対面：' + randomcrab() + '\n' + weaponset;
         shuffling();
         drandomizer += '\n' + '\n' + '対面のパートナー：' + randomcrab() + '\n' + weaponset;
-        message.reply(drandomizer).then(message => console.log(`Sent message: ${drandomizer}`)).catch(console.error);
+        msg.channel.send(drandomizer).then(message => console.log(`Sent message: ${drandomizer}`)).catch(console.error);
         return;
     }
     function randomweapon() {
